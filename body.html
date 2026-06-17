@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Postulantes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Registro de Postulantes</h1>
+    <form id="registroForm">
+        <input type="text" id="nombres" placeholder="Nombres" required>
+        <input type="text" id="apellidos" placeholder="Apellidos" required>
+        <input type="text" id="dni" placeholder="DNI" required>
+        <input type="email" id="correo" placeholder="Correo" required>
+        <input type="text" id="celular" placeholder="Celular">
+        <input type="number" id="edad" placeholder="Edad">
+        
+        <select id="sexo_select" required><option>Cargando sexos...</option></select>
+        <select id="grado_select" required><option>Cargando grados...</option></select>
+        <select id="carrera_select" required><option>Cargando carreras...</option></select>
+        <select id="modalidad_select" required><option>Cargando modalidades...</option></select>
+        <textarea id="observaciones" placeholder="Observaciones"></textarea>
+        
+        <button type="submit">Registrar Postulante</button>
+    </form>
+
+    <h2>Postulantes registrados</h2>
+    <label>Filtrar por Sexo:</label>
+    <select id="filtro_sexo"><option value="">Todos</option></select>
+
+    <table id="tablaPostulantes">
+        <thead>
+            <tr>
+                <th>Nombre</th><th>DNI</th><th>Correo</th><th>Sexo</th>
+                <th>Grado</th><th>Carrera</th><th>Modalidad</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+</body>
+</html>
